@@ -1,21 +1,7 @@
 import Script from 'next/script'
 
-interface OrganizationSchema {
-  name: string
-  description: string
-  url: string
-  logo?: string
-  image?: string
-  telephone: string
-  email: string
-  address: {
-    streetAddress: string
-    addressLocality: string
-    postalCode: string
-    addressCountry: string
-  }
-  sameAs?: string[]
-}
+// JSON-LD schemas use dynamic properties, so we use Record<string, any>
+type JsonLdSchema = Record<string, any>
 
 interface BreadcrumbItem {
   name: string
@@ -32,7 +18,7 @@ interface ArticleSchema {
 }
 
 export function OrganizationStructuredData() {
-  const schema: OrganizationSchema = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "LegalService",
     name: "Адвокат Довбешко Светлана Юрьевна",
@@ -61,7 +47,7 @@ export function OrganizationStructuredData() {
 }
 
 export function BreadcrumbStructuredData({ items }: { items: BreadcrumbItem[] }) {
-  const schema = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: items.map((item, index) => ({
@@ -82,7 +68,7 @@ export function BreadcrumbStructuredData({ items }: { items: BreadcrumbItem[] })
 }
 
 export function ArticleStructuredData({ article }: { article: ArticleSchema }) {
-  const schema = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.headline,
@@ -114,7 +100,7 @@ export function ArticleStructuredData({ article }: { article: ArticleSchema }) {
 }
 
 export function LocalBusinessStructuredData() {
-  const schema = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "Attorney",
     name: "Адвокат Довбешко Светлана Юрьевна",
