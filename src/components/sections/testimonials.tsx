@@ -104,7 +104,7 @@ export default function Testimonials() {
                       ))}
                     </div>
                     <blockquote className="mb-6 text-lg italic text-foreground">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                     </blockquote>
                     <figcaption>
                       <cite className="not-italic font-semibold text-foreground">
