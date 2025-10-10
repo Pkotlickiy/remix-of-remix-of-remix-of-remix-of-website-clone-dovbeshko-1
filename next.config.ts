@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  outputFileTracingRoot: path.resolve(__dirname, '../../'),
   ...(process.env.NODE_ENV === 'development'
     ? {
         turbopack: {
@@ -31,4 +30,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-// Orchids restart: 1760014613888
+// Orchids restart: 1760107745724
