@@ -1,17 +1,10 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://advokat-dovbeshko.ru'
-
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/'],
-      },
-      {
-        userAgent: 'Yandex',
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
@@ -20,8 +13,12 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
+      {
+        userAgent: 'Yandex',
+        allow: '/',
+        disallow: ['/api/', '/admin/'],
+      },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: 'https://advokat-dovbeshko.ru/sitemap.xml',
   }
 }

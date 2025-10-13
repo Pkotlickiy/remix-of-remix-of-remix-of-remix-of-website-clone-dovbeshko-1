@@ -3,80 +3,65 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://advokat-dovbeshko.ru'
 
-  // Статические страницы
+  // Основные статические страницы
   const staticPages = [
+    '',
+    '/booking',
+    '/contacts',
+    '/privacy-policy',
+  ]
+
+  // Области практики
+  const practiceAreas = [
+    'criminal-law',
+    'military-law',
+    'real-estate',
+    'inheritance',
+    'civil-disputes',
+    'administrative-law',
+    'arbitration',
+    'business-law',
+    'family-law',
+  ]
+
+  // Услуги
+  const services = [
+    'legal-consultation',
+    'court-representation',
+    'document-preparation',
+    'legal-support',
+    'appeals',
+    'online-consultation',
+  ]
+
+  return [
+    // Главная страница
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 1,
+      changeFrequency: 'weekly',
+      priority: 1.0,
     },
-    {
-      url: `${baseUrl}/blog`,
+    // Статические страницы
+    ...staticPages.slice(1).map((route) => ({
+      url: `${baseUrl}${route}`,
       lastModified: new Date(),
-      changeFrequency: 'daily' as const,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+    // Области практики
+    ...practiceAreas.map((slug) => ({
+      url: `${baseUrl}/practice/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/booking`,
+    })),
+    // Услуги
+    ...services.map((slug) => ({
+      url: `${baseUrl}/services/${slug}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contacts`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
+      priority: 0.7,
+    })),
   ]
-
-  // Страницы практик
-  const practicePages = [
-    'criminal',
-    'military',
-    'realestate',
-    'land',
-    'inheritance',
-    'unjust-enrichment',
-    'medical',
-    'consumer',
-    'arbitration',
-  ].map((slug) => ({
-    url: `${baseUrl}/practice/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  // Страницы услуг
-  const servicePages = [
-    'document-preparation',
-    'court-representation',
-  ].map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
-
-  // Статьи блога
-  const blogPosts = [
-    'zashchita-prav-voennosluzhaschih',
-    'osparivanie-zaveshchaniya',
-    'pokupka-nedvizhimosti-riski',
-    'ugolovnaya-zashchita-na-stadii-sledstviya',
-    'zemelnye-spory-granitsy',
-    'meditsinskaya-oshibka-kompensatsiya',
-    'vozvrat-nekachestvennogo-tovara',
-    'arbitrazhnye-spory-praktika',
-    'neosnovatelnoe-obogashchenie-praktika',
-  ].map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }))
-
-  return [...staticPages, ...practicePages, ...servicePages, ...blogPosts]
 }

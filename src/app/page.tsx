@@ -11,7 +11,7 @@ import { OrganizationStructuredData, LocalBusinessStructuredData } from '@/compo
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Главная',
+  title: 'Адвокат Довбешко С.Ю. в Санкт-Петербурге | Профессиональная юридическая помощь',
   description: 'Адвокат Довбешко Светлана Юрьевна в Санкт-Петербурге. Профессиональная юридическая помощь по уголовным, военным делам, недвижимости, наследственным спорам. Опыт более 10 лет. Записаться на консультацию.',
   openGraph: {
     title: 'Адвокат Довбешко С.Ю. в Санкт-Петербурге',
