@@ -290,7 +290,7 @@ export default async function PracticeDetailPage({ params }: { params: Promise<{
                         </a>
                         <div className="flex items-center gap-3 text-muted-foreground">
                           <Clock className="h-5 w-5" />
-                          <span>Пн-Пт: 9:00-18:00</span>
+                          <span>Пн-Пт: 9:00-20:00, Сб: 9:00-15:00</span>
                         </div>
                       </div>
                       <div className="mt-6 space-y-3">

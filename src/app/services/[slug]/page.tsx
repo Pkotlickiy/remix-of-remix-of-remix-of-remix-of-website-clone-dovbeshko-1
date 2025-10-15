@@ -241,7 +241,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                       </a>
                       <div className="flex items-start gap-3 text-sm text-muted-foreground">
                         <Clock className="mt-0.5 h-4 w-4 text-primary" />
-                        <span>Пн-Пт: 9:00-18:00</span>
+                        <span>Пн-Пт: 9:00-20:00, Сб: 9:00-15:00</span>
                       </div>
                     </div>
                   </div>

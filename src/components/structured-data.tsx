@@ -34,7 +34,7 @@ export function OrganizationStructuredData() {
       addressCountry: "RU"
     },
     priceRange: "$$",
-    openingHours: "Mo-Fr 09:00-18:00",
+    openingHours: "Mo-Fr 09:00-20:00, Sa 09:00-15:00",
   }
 
   return (

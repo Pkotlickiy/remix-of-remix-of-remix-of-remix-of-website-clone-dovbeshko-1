@@ -122,7 +122,7 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium">Пн-Пт: 9:00 - 20:00</p>
                     <p className="text-sm text-muted-foreground">
-                      Сб-Вс: по предварительной записи
+                      Сб: 9:00 - 15:00
                     </p>
                   </div>
                 </div>
