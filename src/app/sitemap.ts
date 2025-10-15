@@ -1,67 +1,92 @@
 import { MetadataRoute } from 'next'
 
+// Practice areas slugs
+const practiceAreas = [
+  'criminal',
+  'military',
+  'realestate',
+  'land',
+  'inheritance',
+  'unjust-enrichment',
+  'medical',
+  'consumer',
+  'arbitration'
+]
+
+// Services slugs
+const services = [
+  'document-preparation',
+  'court-representation',
+  'consultations',
+  'legal-analysis',
+  'pre-trial-settlement',
+  'execution'
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://advokat-dovbeshko.ru'
-
-  // Основные статические страницы
-  const staticPages = [
-    '',
-    '/booking',
-    '/contacts',
-    '/privacy-policy',
-  ]
-
-  // Области практики
-  const practiceAreas = [
-    'criminal-law',
-    'military-law',
-    'real-estate',
-    'inheritance',
-    'civil-disputes',
-    'administrative-law',
-    'arbitration',
-    'business-law',
-    'family-law',
-  ]
-
-  // Услуги
-  const services = [
-    'legal-consultation',
-    'court-representation',
-    'document-preparation',
-    'legal-support',
-    'appeals',
-    'online-consultation',
-  ]
-
-  return [
-    // Главная страница
+  
+  // Static pages
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
     },
-    // Статические страницы
-    ...staticPages.slice(1).map((route) => ({
-      url: `${baseUrl}${route}`,
+    {
+      url: `${baseUrl}/practice`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    })),
-    // Области практики
-    ...practiceAreas.map((slug) => ({
-      url: `${baseUrl}/practice/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 0.9,
-    })),
-    // Услуги
-    ...services.map((slug) => ({
-      url: `${baseUrl}/services/${slug}`,
+    },
+    {
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contacts`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.7,
-    })),
+    },
+    {
+      url: `${baseUrl}/booking`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ]
+
+  // Practice area pages
+  const practicePages: MetadataRoute.Sitemap = practiceAreas.map((slug) => ({
+    url: `${baseUrl}/practice/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  // Service pages
+  const servicePages: MetadataRoute.Sitemap = services.map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...practicePages, ...servicePages]
 }

@@ -36,7 +36,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="pointer-events-none absolute right-1/4 top-10 h-6 w-6 rounded-full bg-primary/20 blur-[2px]"
+          className="pointer-events-none absolute left-1/4 top-10 h-6 w-6 rounded-full bg-primary/20 blur-[2px]"
           animate={{ y: [0, 18, 0], x: [0, 6, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
         />
@@ -78,10 +78,10 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ delay: 0.12 }}
             >
-              Адвокат в Санкт-Петербурге
+              Довбешко Светлана Юрьевна
               <br />
-              <span className="relative inline-block">
-                Довбешко Светлана Юрьевна
+              <span className="relative inline-block text-3xl md:text-4xl lg:text-5xl">
+                Адвокат в СПБ
                 <span className="absolute -bottom-2 left-0 h-1 w-full bg-primary"></span>
               </span>
             </motion.h1>

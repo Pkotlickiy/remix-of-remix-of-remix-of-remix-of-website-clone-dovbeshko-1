@@ -1,6 +1,7 @@
 import Header from "@/components/sections/header";
 import CtaSection from "@/components/sections/cta";
 import Footer from "@/components/sections/footer";
+import { BreadcrumbStructuredData } from "@/components/structured-data";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -143,6 +144,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   return (
     <div className="min-h-screen bg-background">
+      <BreadcrumbStructuredData
+        items={[
+          { name: "Главная", url: "/" },
+          { name: "Услуги", url: "/services" },
+          { name: service.title, url: `/services/${slug}` }
+        ]}
+      />
       <Header />
       <main id="main-content" className="pt-16">
         {/* Hero Section */}

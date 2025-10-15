@@ -1,0 +1,30 @@
+# robots.txt для advokat-dovbeshko.ru
+
+User-agent: *
+Allow: /
+
+# Разрешить индексацию всех важных разделов
+Allow: /practice/
+Allow: /services/
+Allow: /blog/
+Allow: /contacts/
+Allow: /booking/
+
+# Запретить служебные директории
+Disallow: /api/
+Disallow: /_next/
+Disallow: /visual-edits/
+
+# Карта сайта
+Sitemap: https://advokat-dovbeshko.ru/sitemap.xml
+
+# Настройки для Яндекс
+User-agent: Yandex
+Allow: /
+
+# Настройки для Google
+User-agent: Googlebot
+Allow: /
+
+# Время задержки между запросами (необязательно)
+Crawl-delay: 1

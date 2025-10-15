@@ -1,6 +1,7 @@
 import Header from "@/components/sections/header";
 import CtaSection from "@/components/sections/cta";
 import Footer from "@/components/sections/footer";
+import { BreadcrumbStructuredData } from "@/components/structured-data";
 import Link from "next/link";
 import { Scale, Shield, Building2, Landmark, FileText, TrendingUp, Stethoscope, ShoppingCart, Briefcase, ArrowRight, Phone, Mail, Clock, CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
@@ -172,6 +173,15 @@ export default async function PracticeDetailPage({ params }: { params: Promise<{
 
   return (
     <div className="min-h-screen">
+      {item && (
+        <BreadcrumbStructuredData
+          items={[
+            { name: "Главная", url: "/" },
+            { name: "Практика", url: "/practice" },
+            { name: item.title, url: `/practice/${slug}` }
+          ]}
+        />
+      )}
       <Header />
       <main id="main-content" className="pt-16">
         {/* Hero Section */}
