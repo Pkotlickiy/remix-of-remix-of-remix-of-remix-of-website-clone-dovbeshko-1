@@ -311,7 +311,7 @@ export default async function PracticeDetailPage({ params }: { params: Promise<{
                           Записаться на консультацию
                         </Link>
                         <Link
-                          href="/contacts"
+                          href="/booking"
                           className="block w-full rounded-lg border px-6 py-3 text-center font-semibold text-foreground transition-colors hover:bg-muted"
                         >
                           Связаться

@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/services", label: "Помощь" },
   { href: "/practice", label: "Практика" },
   { href: "/blog", label: "Блог" },
-  { href: "/contacts", label: "Контакты" },
   { href: "/booking", label: "Записаться" },
 ];
 

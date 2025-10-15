@@ -179,7 +179,7 @@ export default function BlogPage() {
                 Записаться на консультацию
               </Link>
               <Link
-                href="/contacts"
+                href="/booking"
                 className="rounded-md border border-white px-6 py-3 font-semibold transition-colors hover:bg-white/10 !text-white">
 
                 Связаться

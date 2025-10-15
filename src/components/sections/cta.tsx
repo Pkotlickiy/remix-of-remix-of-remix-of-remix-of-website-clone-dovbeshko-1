@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import { Phone, MapPin, ClipboardList, MessageSquare } from 'lucide-react';
+import { Phone, MapPin, ClipboardList } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const CtaSection = () => {
@@ -43,14 +43,7 @@ const CtaSection = () => {
             className="inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-white px-8 py-3 text-base font-medium text-primary transition-all duration-300 hover:bg-gray-100 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
 
             <ClipboardList className="h-5 w-5" />
-            Получить консультацию
-          </Link>
-          <Link
-            href="/contacts"
-            className="inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-md border border-white bg-transparent px-8 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5 hover:shadow-md/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-
-            <MessageSquare className="h-5 w-5" />
-            Связаться с нами
+            Записаться на консультацию
           </Link>
         </motion.div>
 
