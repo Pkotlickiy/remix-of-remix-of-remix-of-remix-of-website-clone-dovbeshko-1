@@ -60,12 +60,12 @@ const BLOG_POSTS = [
   readTime: "6 мин"
 },
 {
-  slug: "obzhalovanie-shtrafov-gibdd",
-  title: "Обжалование штрафов ГИБДД: пошаговая инструкция",
-  excerpt: "Как правильно обжаловать постановление о штрафе. Сроки обжалования, порядок подачи жалобы и типичные ошибки водителей.",
-  category: "Административное право",
+  slug: "spory-s-zastroyshchikami-prava",
+  title: "Споры с застройщиками: защита прав дольщиков",
+  excerpt: "Как защитить свои права при покупке квартиры в новостройке. Нарушение сроков сдачи, несоответствие качества, возврат средств.",
+  category: "Недвижимость",
   date: "3 января 2025",
-  readTime: "5 мин"
+  readTime: "7 мин"
 },
 {
   slug: "ugolovnaya-zashchita-na-stadii-sledstviya",
@@ -74,6 +74,14 @@ const BLOG_POSTS = [
   category: "Уголовное право",
   date: "28 декабря 2024",
   readTime: "8 мин"
+},
+{
+  slug: "obzhalovanie-prigovora-v-sude",
+  title: "Обжалование приговора: процедура и сроки",
+  excerpt: "Как правильно обжаловать приговор суда. Апелляция, кассация и надзорная инстанция. Основания для отмены или изменения приговора.",
+  category: "Уголовное право",
+  date: "26 декабря 2024",
+  readTime: "7 мин"
 },
 {
   slug: "nalogovye-spory-zashchita",
@@ -90,14 +98,6 @@ const BLOG_POSTS = [
   category: "Земельное право",
   date: "20 декабря 2024",
   readTime: "5 мин"
-},
-{
-  slug: "bankrotstvo-fizicheskih-lits",
-  title: "Банкротство физических лиц: плюсы и минусы",
-  excerpt: "Когда стоит подавать на банкротство, как проходит процедура, какие долги можно списать и какие последствия ждут должника.",
-  category: "Банкротство",
-  date: "18 декабря 2024",
-  readTime: "8 мин"
 },
 {
   slug: "meditsinskaya-oshibka-kompensatsiya",
