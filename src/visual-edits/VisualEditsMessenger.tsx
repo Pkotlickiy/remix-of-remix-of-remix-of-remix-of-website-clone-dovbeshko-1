@@ -20,14 +20,23 @@ export default function VisualEditsMessenger() {
 
       const rect = target.getBoundingClientRect();
       
+      // Convert className and id to strings to avoid SVGAnimatedString clone errors
+      const className = typeof target.className === 'string' 
+        ? target.className 
+        : (target.className as any)?.baseVal || '';
+      
+      const id = typeof target.id === 'string'
+        ? target.id
+        : '';
+      
       window.parent.postMessage(
         {
           type: CHANNEL,
           action: "hover",
           data: {
             tagName: target.tagName,
-            className: target.className,
-            id: target.id,
+            className: className,
+            id: id,
             rect: {
               top: rect.top,
               left: rect.left,
@@ -47,14 +56,23 @@ export default function VisualEditsMessenger() {
       e.preventDefault();
       e.stopPropagation();
 
+      // Convert className and id to strings to avoid SVGAnimatedString clone errors
+      const className = typeof target.className === 'string' 
+        ? target.className 
+        : (target.className as any)?.baseVal || '';
+      
+      const id = typeof target.id === 'string'
+        ? target.id
+        : '';
+
       window.parent.postMessage(
         {
           type: CHANNEL,
           action: "select",
           data: {
             tagName: target.tagName,
-            className: target.className,
-            id: target.id,
+            className: className,
+            id: id,
           },
         },
         "*"
