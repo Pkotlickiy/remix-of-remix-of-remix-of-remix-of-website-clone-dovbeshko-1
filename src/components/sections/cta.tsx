@@ -64,7 +64,8 @@ const CtaSection = () => {
             </a>
             <div className="flex items-center gap-2 transition-transform duration-300 hover:-translate-y-0.5">
               <MapPin className="h-4 w-4 !text-[26px]" />
-              <span className="!text-xl">Санкт-Петербург, Московский проспект 143</span>
+              <span className="!text-xl">196066, Санкт-Петербург, Московский пр-кт 216, Лит. А, офис 7 (1 минута от м. Московская).
+              Вход со стороны ул. Алтайская д. 3</span>
             </div>
           </div>
         </motion.div>
