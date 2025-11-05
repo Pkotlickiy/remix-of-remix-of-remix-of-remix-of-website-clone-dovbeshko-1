@@ -68,7 +68,8 @@ const Footer = () => {
               <li className="flex items-start text-sm">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-gray-400" />
                 <span className="ml-2">
-                  Московский пр-кт 143, СПб
+                  196066, Санкт-Петербург, Московский пр-кт 216, Лит. А, офис 7 (1 минута от м. Московская).
+              Вход со стороны ул. Алтайская д. 3
                 </span>
               </li>
               <li className="flex items-center text-sm">
