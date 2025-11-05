@@ -91,7 +91,8 @@ const ContactSection = () => {
                   <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
                     <p className="font-medium">
-                      196105, Санкт-Петербург, Московский пр-кт. 143
+                      196066, Санкт-Петербург, Московский пр-кт 216, Лит. А, офис 7 (1 минута от м. Московская).
+              Вход со стороны ул. Алтайская д. 3
                     </p>
                   </div>
                 </div>
