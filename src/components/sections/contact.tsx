@@ -177,6 +177,26 @@ const ContactSection = () => {
                     className="min-h-[120px]"
                   />
                 </div>
+                <div className="mb-4 text-sm">
+                  <label className="flex items-start gap-2 cursor-pointer">
+                    <input 
+                      type="checkbox" 
+                      name="consent" 
+                      required 
+                      className="mt-1 flex-shrink-0"
+                    />
+                    <span>
+                      Я даю согласие на обработку моих персональных данных в соответствии с{' '}
+                      <a href="/privacy-policy.html" target="_blank" className="text-blue-600 hover:underline">
+                        Политикой конфиденциальности
+                      </a>{' '}
+                      и принимаю условия{' '}
+                      <a href="/user-agreement.html" target="_blank" className="text-blue-600 hover:underline">
+                        Пользовательского соглашения
+                      </a>.
+                    </span>
+                  </label>
+                </div>
                 <Button type="submit" disabled={loading} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md">
                   {loading ? "Отправка..." : "Отправить сообщение"}
                 </Button>

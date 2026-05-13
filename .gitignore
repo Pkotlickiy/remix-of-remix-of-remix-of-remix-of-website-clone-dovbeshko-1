@@ -1,38 +1,67 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+```
+# Dependencies
+node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Environment
+.env
+.env.local
+.env.*
 
-# testing
-/coverage
+# Logs
+*.log
 
-# next.js
-/.next/
-/out/
+# Temporary files
+*.tmp
+*.swp
 
-# production
-/build
+# Build artifacts
+dist/
+build/
+target/
 
-# misc
-.DS_Store
-*.pem
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.ipynb_checkpoints
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
 
-# debug
+# JavaScript
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+node_modules/
+jspm_packages/
+typings/
+.svelte-kit/
+.cjs
+.mjs
 
-# vercel
-.vercel
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# OS
+.DS_Store
+Thumbs.db
+```
