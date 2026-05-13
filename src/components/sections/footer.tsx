@@ -110,9 +110,17 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
           <p>© 2025 Адвокат Довбешко С.Ю. Все права защищены.</p>
-          <Link href="/privacy-policy" className="transition-colors hover:text-accent !text-white !text-sm">
-            Политика конфиденциальности
-          </Link>
+          <div className="flex gap-4 flex-wrap justify-center">
+            <Link href="/privacy-policy.html" className="transition-colors hover:text-accent !text-white !text-sm">
+              Политика конфиденциальности
+            </Link>
+            <Link href="/user-agreement.html" className="transition-colors hover:text-accent !text-white !text-sm">
+              Пользовательское соглашение
+            </Link>
+            <Link href="/cookie-policy.html" className="transition-colors hover:text-accent !text-white !text-sm">
+              Политика cookie
+            </Link>
+          </div>
         </div>
       </div>
     </footer>);
